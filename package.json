@@ -1,12 +1,17 @@
 {
   "name": "ng-mobile-game-workspace",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:dev": "ng build ng-mobile-game --configuration development",
+    "test:lib": "ng test ng-mobile-game",
+    "lint:lib": "ng lint ng-mobile-game",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "dest-back": "../../dist/ng-mobile-game",
+    "dest-back2": "../../../fumoxin/fmxng/node_modules/ng-mobile-game"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +28,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~12.1.1",
     "@angular/cli": "~12.1.1",
     "@angular/compiler-cli": "~12.1.1",
     "@types/jasmine": "~3.6.0",
@@ -33,6 +39,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-packagr": "^12.1.0",
     "typescript": "~4.3.2"
   }
 }

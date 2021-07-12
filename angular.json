@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ng-mobile-game": {
+      "projectType": "library",
+      "root": "projects/ng-mobile-game",
+      "sourceRoot": "projects/ng-mobile-game/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ng-mobile-game/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-mobile-game/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-mobile-game/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-mobile-game/src/test.ts",
+            "tsConfig": "projects/ng-mobile-game/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-mobile-game/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ng-mobile-game"
 }
