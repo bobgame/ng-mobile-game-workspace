@@ -10,6 +10,7 @@
     "lint:lib": "ng lint ng-mobile-game",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "adduser": "npm adduser",
     "dest-back": "../../dist/ng-mobile-game",
     "dest-back2": "../../../fumoxin/fmxng/node_modules/ng-mobile-game"
   },
